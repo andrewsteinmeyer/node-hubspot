@@ -18,9 +18,9 @@ npm install hubspot
 
 ```javascript
 const Hubspot = require('hubspot')
-const hubspot = new Hubspot({ 
+const hubspot = new Hubspot({
   apiKey: 'abc',
-  checkLimit: false // (Optional) Specify whether or not to check the API limit on each call. Default: true 
+  checkLimit: false // (Optional) Specify whether or not to check the API limit on each call. Default: true
 })
 ```
 
@@ -217,7 +217,7 @@ hubspot.deals.getAssociated(objectType, objectId, opts)
 hubspot.deals.deleteById(id)
 hubspot.deals.updateById(id, data)
 hubspot.deals.create(data)
-hubspot.deals.associate(id, objectType, associatedObjectId)
+hubspot.deals.associate(id, contactObjectId) // uses CRM-Associations API to associate deal to contact
 hubspot.deals.removeAssociation(id, objectType, associatedObjectId)
 ```
 
